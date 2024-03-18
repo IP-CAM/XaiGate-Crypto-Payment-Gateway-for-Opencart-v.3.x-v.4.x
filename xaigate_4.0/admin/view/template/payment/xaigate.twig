@@ -1,0 +1,91 @@
+{{ header }}{{ column_left }}
+<div id="content">
+  <div class="page-header">
+    <div class="container-fluid">
+      <div class="float-end">
+        <button type="submit" form="form-payment" data-bs-toggle="tooltip" title="{{ button_save }}" class="btn btn-primary"><i class="fa-solid fa-save"></i></button>
+        <a href="{{ back }}" data-bs-toggle="tooltip" title="{{ button_back }}" class="btn btn-light"><i class="fa-solid fa-reply"></i></a></div>
+      <h1>{{ heading_title }}</h1>
+      <ol class="breadcrumb">
+        {% for breadcrumb in breadcrumbs %}
+          <li class="breadcrumb-item"><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+        {% endfor %}
+      </ol>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-header"><i class="fa-solid fa-pencil"></i> {{ text_edit }}</div>
+      <div class="card-body">
+			<form action="{{ save }}" method="post" id="form-payment" data-oc-toggle="ajax">
+				<div class="row mb-3">
+					<label for="input-order-status" class="col-sm-2 col-form-label"></label>
+					<div class="col-sm-10">
+						<a href="https://wallet.xaigate.com/merchant/credential" target="_blank">You can manage your API keys within the XaiGate Payment Gateway Settings page, available here >>></a>
+					</div>
+				</div>
+				<div class="row mb-3 required{% if error_apikey %} has-error{% endif %}">
+					<label for="input-order-status" class="col-sm-2 col-form-label">{{ entry_apikey }}</label>
+					<div class="col-sm-10">
+						<input type="text" name="payment_xaigate_apikey" value="{{ payment_xaigate_apikey }}" class="form-control">
+						{% if error_apikey %}
+						<div class="text-danger">{{ error_apikey }}</div>
+						{% endif %}
+					</div>
+				</div>
+				<div class="row mb-3">
+					<label for="input-order-status" class="col-sm-2 col-form-label">{{ entry_merchant_id }}</label>
+					<div class="col-sm-10">
+						<input type="text" name="payment_xaigate_merchant_id" value="{{ payment_xaigate_merchant_id }}" placeholder="My Store" class="form-control">
+						{% if error_merchant_id %}
+						<div class="text-danger">{{ error_merchant_id }}</div>
+						{% endif %}
+					</div>
+				</div>
+				<div class="row mb-3">
+					<label for="input-order-status" class="col-sm-2 col-form-label">{{ entry_title }}</label>
+					<div class="col-sm-10">
+						<input type="text" name="payment_xaigate_title" value="{{ payment_xaigate_title }}" placeholder="{{ heading_title }}" class="form-control">
+					</div>
+				</div>
+				<div class="row mb-3 ">
+					<label for="input-order-status" class="col-sm-2 col-form-label">{{ entry_order_status }}</label>
+					<div class="col-sm-10">
+						<select name="payment_xaigate_order_status_id" class="form-control">
+							{% for order_status in order_statuses %}
+							{% if order_status.order_status_id == payment_xaigate_order_status_id %}
+							<option value="{{ order_status.order_status_id }}"
+							selected="selected">{{ order_status.name }}</option>
+							{% else %}
+							<option value="{{ order_status.order_status_id }}">{{ order_status.name }}</option>
+							{% endif %}
+							{% endfor %}
+						</select>
+					</div>
+				</div>
+				<div class="row mb-3 ">
+					<label for="input-order-status" class="col-sm-2 col-form-label">{{ entry_status }}</label>
+					<div class="col-sm-10">
+						<select name="payment_xaigate_status" class="form-control">
+							{% if payment_xaigate_status %}
+							<option value="1" selected="selected">{{ text_enabled }}</option>
+							<option value="0">{{ text_disabled }}</option>
+							{% else %}
+							<option value="1">{{ text_enabled }}</option>
+							<option value="0" selected="selected">{{ text_disabled }}</option>
+							{% endif %}
+						</select>
+					</div>
+				</div>
+				<div class="row mb-3 ">
+					<label for="input-order-status" class="col-sm-2 col-form-label">{{ entry_sort_order }}</label>
+					<div class="col-sm-10">
+						<input type="text" name="payment_xaigate_sort_order" value="{{ payment_xaigate_sort_order }}" class="form-control">
+					</div>
+				</div>
+			</form>
+      </div>
+    </div>
+  </div>
+</div>
+{{ footer }}
