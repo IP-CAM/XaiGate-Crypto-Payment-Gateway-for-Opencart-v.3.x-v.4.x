@@ -29,15 +29,6 @@ Supported almost all cryptocurrencies on: Ethereum, Binance Smart Chain and TRON
 - Fast funds withdrawal (within 30 minutes)
 - Help with integration and provide fast online support
 
-**Installation**
-1. First you must install woocommerce plugin and activate it.
-2. Click on the PLUGIN option (you will find It In the sidebar).
-3. Then select on ADD NEW option (you will find it on the top of the page)
-4. After selecting that option new page will pop up and it shows you different plugins. You must click on the search option and type XaiGate Crypto Payment Gateway.
-5. After finding the plugin click on the INSTALL NOW and Install it.
-6. After the completion of the plugin, click on ACTIVATE. When you activate our plugin you will see XAIGATE appear in the sidebar.
-7. Congratulations! You have successfully installed our plugin on your website.
-
 **Requirements for integration**
 * For the Integration process with Xaigate, users must require to have  Opencart version 4.0.1.1
 * If you don’t have an account on Xaigate, then make sure to [*sign up*](https://wallet.xaigate.com/register). 
