@@ -69,7 +69,7 @@ Supported almost all cryptocurrencies on: Ethereum, Binance Smart Chain and TRON
 
 ![Xaigate-Plugin-configuration](https://www.xaigate.com/wp-content/uploads/2024/03/opencart-config-4.png)
 
-* APIKey: You'll need to obtain an API Key from your Xaigate project settings. Access the Credential page of your Xaigate dashboard to retrieve your API Key: https://wallet.xaigate.com/
+* APIKey: You'll need to obtain an API Key from your Xaigate project settings. Access the Credential page of your Xaigate dashboard to retrieve your API Key: https://wallet.xaigate.com/merchant/credential
 * Shop name: Enter your shop name.
 * Title: The title written by you will appear on the checkout page.
 * In the last tab of **Order status after payment** you can select one of your own status about what you want to show to customers when they successfully made out payment. 
