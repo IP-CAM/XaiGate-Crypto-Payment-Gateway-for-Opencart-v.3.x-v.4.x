@@ -5,7 +5,7 @@ $_['heading_title'] = 'XaiGate Payment System';
 // Text 
 $_['text_edit'] = 'Edit module';
 $_['text_payment'] = 'Payment';
-$_['text_xaigate'] = '<a href="https://www.xaigate.com/" target="_blank"><img src="view/image/payment/xaigate.png" alt="XaiGate" title="XaiGate" style="border: 1px solid #EEEEEE;" /></a>';
+$_['text_xaigate'] = '<a href="https://www.xaigate.com/" target="_blank"><img src="../extension/xaigate/admin/view/image/payment/xaigate.png" alt="XaiGate" title="XaiGate" style="border: 1px solid #EEEEEE;" /></a>';
 $_['text_success'] = 'Settings updated';   
 $_['text_pay'] = 'XaiGate';
 $_['text_response_description'] = 'Error text:';
